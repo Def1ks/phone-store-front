@@ -12,7 +12,7 @@ function initCarousel() {
     return; // Выходим из функции, если элементы отсутствуют
   }
 
-  let currentIndex = 0; // Переменная внутри функции, изолирована
+  let currentIndex = 0; 
 
   function updateCarousel() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
