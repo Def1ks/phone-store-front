@@ -20,17 +20,34 @@
     header .menu-toggle {
         display: block;
     }
+
+    .carousel-btn {
+        font-size: 1.5rem; 
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
 }
 
 /** Стили для телефонов **/
 @media (max-width: 800px) {
     .carousel {
-        width: 80%;
+        width: 90%;
+    }
+
+    header {
+        padding-inline: 20px;
+    }
+
+    header .logo { 
+        font-size: 1.8rem;
     }
 }
 
 /** Стили для очень маленьких телефонов **/
 @media (max-width: 500px) {
-
+    header {
+        padding-inline: 20px;
+    }
 }
 
