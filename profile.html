@@ -16,11 +16,15 @@
 <body>
     <header>
         <a href="index.html" class="logo">Phone Store</a>
+        <!-- Основная навигация -->
+        <nav class = "desktop-menu">
         <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="about-us.html">О нас</a></li>
         </ul>
+        </nav>
+        <!-- Иконки профиля и корзины -->
         <div class="header-icons">
             <a href="profile.html">
                 <svg width="50px" height="50px" viewBox="0 0 24 24">
@@ -35,7 +39,21 @@
                 </svg>
             </a>
         </div>
+        <!-- Кнопка бургер -->
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <span class="hamburger"></span>
+        </button>
     </header>
+    <!-- Выезжающее меню -->
+    <nav class="mobile-menu" id="sideMenu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about-us.html">О нас</a></li>
+            <li><a href="profile.html" class="active">Профиль</a></li>
+            <li><a href="basket.html">Корзина</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>

@@ -11,11 +11,22 @@
     body {
         padding-inline: 0px;
     }
+
+    header .desktop-menu ul,
+    header .header-icons {
+        display: none;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
 }
 
 /** Стили для телефонов **/
 @media (max-width: 800px) {
-
+    .carousel {
+        width: 80%;
+    }
 }
 
 /** Стили для очень маленьких телефонов **/

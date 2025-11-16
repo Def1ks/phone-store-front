@@ -42,14 +42,14 @@ header .logo {
 }
 
 /* Навигация */
-header ul {
+header .desktop-menu ul {
     display: flex;
     gap: 0.2rem;
     list-style-type: none;
     padding: 0px;
 }
 
-header ul li a {
+header .desktop-menu ul li a {
     text-decoration: none;
     color: var(--color-medium-gray);
     font-family: var(--font-body), sans-serif;
@@ -65,8 +65,8 @@ header ul li a {
     text-align: center;
 }
 
-header ul li a::before,
-header ul li a::after {
+header .desktop-menu ul li a::before,
+header .desktop-menu ul li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -80,30 +80,30 @@ header ul li a::after {
         bottom 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-header ul li a::before {
+header .desktop-menu ul li a::before {
     top: -10px;
 }
 
-header ul li a::after {
+header .desktop-menu ul li a::after {
     bottom: -10px;
 }
 
-header ul li a:hover {
+header .desktop-menu ul li a:hover {
     color: var(--color-white);
     background-color: var(--color-dark-gray)
 }
 
-header ul li a:hover::before {
+header .desktop-menu ul li a:hover::before {
     top: -3px;
     transform: scaleX(1);
 }
 
-header ul li a:hover::after {
+header .desktop-menu ul li a:hover::after {
     bottom: -3px;
     transform: scaleX(1);
 }
 
-header .active {
+header .desktop-menu .active {
     color: var(--color-dark-gray);
 }
 
@@ -125,9 +125,120 @@ header .header-icons svg:hover {
     transform: scale(1.1);
 }
 
+/* Бургер меню */
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25px;
+    height: 20px;
+    padding: 0;
+    display: none; 
+    z-index: 15;
+}
+
+.menu-toggle .hamburger {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle .hamburger::before {
+    top: -8px;
+}
+
+.menu-toggle .hamburger::after {
+    top: 8px;
+}
+
+.menu-toggle.is-active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.is-active .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu {
+    position: fixed;
+    right: -45vw; 
+    z-index: 10;
+    background-color: #f8f9fa;
+    height: 100vh;
+    width: 45vw;
+    transition: right 0.4s ease; 
+}
+
+.mobile-menu.menu-open { 
+    right: 0; 
+}
+
+.mobile-menu ul {
+    margin-top: 90px;
+}
+
+.mobile-menu ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: var(--color-medium-gray);
+    font-family: var(--font-ui);
+    font-weight: 500;
+}
+
+.mobile-menu .active {
+    color: var(--color-dark-gray);
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed; 
+  width: 100%;
+  height: 100%; 
+  top: 0; 
+  left: 0; 
+}
+
+/* Псевдоэлемент для затемнения */
+.no-scroll::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 4; 
+  pointer-events: none; 
+}
+
 /* Карусель на главной странице */
 .carousel {
-    max-width: 60%;
+    width: 60%;
     margin: 2rem auto;
     position: relative;
     overflow: hidden;
