@@ -56,6 +56,7 @@ function initCarousel() {
 function initBurgerMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const backdrop = document.querySelector('.backdrop'); // Добавлено
   const body = document.body;
 
   // Проверяем, существуют ли элементы меню на странице
@@ -67,8 +68,24 @@ function initBurgerMenu() {
   menuToggle.addEventListener('click', function () {
     menuToggle.classList.toggle('is-active');
     mobileMenu.classList.toggle('menu-open');
-    body.classList.toggle('no-scroll', mobileMenu.classList.contains('menu-open'));
+    
+    // Переключаем классы для body и backdrop
+    const isOpen = mobileMenu.classList.contains('menu-open');
+    body.classList.toggle('no-scroll', isOpen);
+    if (backdrop) {
+      backdrop.classList.toggle('active', isOpen);
+    }
   });
+
+  // Закрытие меню при клике на backdrop
+  if (backdrop) {
+    backdrop.addEventListener('click', function() {
+      menuToggle.classList.remove('is-active');
+      mobileMenu.classList.remove('menu-open');
+      body.classList.remove('no-scroll');
+      backdrop.classList.remove('active');
+    });
+  }
 }
 
 // Основной код, который запускается после загрузки DOM

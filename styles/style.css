@@ -22,6 +22,7 @@ body {
     flex-direction: column;
     padding-inline: 100px;
     align-items: center;
+    margin-top: 80px;
 }
 
 /* Шапка */
@@ -33,8 +34,13 @@ header {
     padding-inline: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3); /* Чёрная обводка снизу */
-    box-sizing: border-box; /* Учитываем обводку в высоту */
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3); 
+    box-sizing: border-box; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: var(--color-white);
 }
 
 /* Лого на шапке */
@@ -189,6 +195,7 @@ header .header-icons svg:hover {
 .mobile-menu {
     position: fixed;
     right: -45vw; 
+    top: 0;
     z-index: 10;
     background-color: #f8f9fa;
     height: 100vh;
@@ -201,7 +208,7 @@ header .header-icons svg:hover {
 }
 
 .mobile-menu ul {
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 .mobile-menu ul li {
@@ -220,26 +227,25 @@ header .header-icons svg:hover {
     color: var(--color-dark-gray);
 }
 
+/* Блокировка скролла при открытом меню */
 .no-scroll {
-  overflow: hidden;
-  position: fixed; 
-  width: 100%;
-  height: 100%; 
-  top: 0; 
-  left: 0; 
+    overflow: hidden;
+    padding-right: calc(100vw - 100%);
 }
 
-/* Псевдоэлемент для затемнения */
-.no-scroll::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 4; 
-  pointer-events: none; 
+.backdrop {
+    position: fixed;        /* ← Привязан к окну браузера */
+    top: 0;
+    left: 0;
+    width: 100vw;           /* ← Занимает всю ширину окна */
+    height: 100vh;          /* ← Занимает всю высоту окна */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;             /* ← Должен быть выше контента, но ниже меню */
+    display: none;          /* ← Скрыт по умолчанию */
+}
+
+.backdrop.active {
+    display: block;
 }
 
 /* Карусель на главной странице */
