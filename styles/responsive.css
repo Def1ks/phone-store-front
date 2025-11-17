@@ -3,6 +3,11 @@
     body {
         padding-inline: 50px;
     }
+
+    .page-index .offers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 }
 
 /** Сенсорные устройства **/
@@ -22,7 +27,7 @@
     }
 
     .carousel-btn {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -39,9 +44,29 @@
         padding-inline: 20px;
     }
 
-    header .logo { 
+    header .logo {
         font-size: 1.8rem;
     }
+
+    .page-index .offers {
+        width: 90%;
+    } 
+    
+    .page-index .offers-card {
+        
+    } 
+
+    .page-index .offers .offers-card img {
+        height: 200px;
+    } 
+
+    .page-index .offers .offers-card h3 {
+    font-size: 16px;
+}
+
+    .page-index .offers .offers-card p {
+    font-size: 12px;
+}
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -49,5 +74,11 @@
     header {
         padding-inline: 20px;
     }
-}
 
+    .page-index .offers {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 340px;
+    margin: 0 auto;
+}
+}

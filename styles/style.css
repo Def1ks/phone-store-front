@@ -21,15 +21,20 @@ body {
     display: flex;
     flex-direction: column;
     padding-inline: 100px;
+    align-items: center;
 }
 
 /* Шапка */
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.875rem 3.5rem;
-    padding-bottom: 0px;
+    padding-inline: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3); /* Чёрная обводка снизу */
+    box-sizing: border-box; /* Учитываем обводку в высоту */
 }
 
 /* Лого на шапке */
@@ -239,12 +244,12 @@ header .header-icons svg:hover {
 
 /* Карусель на главной странице */
 .carousel {
-    width: 60%;
+    width: 70%;
     margin: 2rem auto;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 0.1px rgba(0, 0, 0, 0.3) solid;
 }
 
 .carousel-wrapper {
@@ -328,9 +333,45 @@ header .header-icons svg:hover {
     background: rgba(255, 255, 255, 0.8);
 }
 
-hr {
-    border: none;
-    height: 0.5px; 
-    background-color: var(--color-dark-gray); 
-    margin: 20px 0; /* Отступы сверху и снизу */
+/* Стили карточек предложений */
+.page-index .offers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.page-index .offers .offers-card {
+    display: flex;
+    flex-direction: column;
+    border: solid rgba(0, 0, 0, 0.2) 0.5px;
+    border-radius: 12px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.page-index .offers .offers-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.page-index .offers .offers-card .text {
+    margin-top: 30px;
+}
+
+.page-index .offers .offers-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 21px;
+    margin: 0px;
+}
+
+.page-index .offers .offers-card p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
 }
