@@ -82,3 +82,10 @@
     margin: 0 auto;
 }
 }
+
+@media (hover: none) and (pointer: coarse) {
+    .button-animated:hover {
+        background-color: var(--color-dark-gray);
+        color: var(--color-white);
+    }
+}
