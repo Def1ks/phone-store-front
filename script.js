@@ -88,10 +88,9 @@ function initBurgerMenu() {
   }
 }
 
-// Основной код, который запускается после загрузки DOM
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM загружен, инициализируем функции...');
 
-  initCarousel();    // Инициализируем карусель (если она есть)
-  initBurgerMenu();  // Инициализируем бургер-меню (если оно есть)
+  initCarousel();    
+  initBurgerMenu();  
 });

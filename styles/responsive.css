@@ -50,23 +50,26 @@
 
     .page-index .offers {
         width: 90%;
-    } 
-    
-    .page-index .offers-card {
-        
-    } 
+    }
+
+    .page-index .offers-card {}
 
     .page-index .offers .offers-card img {
         height: 200px;
-    } 
+    }
 
     .page-index .offers .offers-card h3 {
-    font-size: 16px;
-}
+        font-size: 16px;
+    }
 
     .page-index .offers .offers-card p {
-    font-size: 12px;
-}
+        font-size: 12px;
+    }
+
+    .page-index .offers .offers-card a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0; 
+    }
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -76,11 +79,11 @@
     }
 
     .page-index .offers {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 340px;
-    margin: 0 auto;
-}
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 340px;
+        margin: 0 auto;
+    }
 }
 
 @media (hover: none) and (pointer: coarse) {

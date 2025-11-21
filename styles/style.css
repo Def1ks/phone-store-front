@@ -38,7 +38,7 @@
 body {
     display: flex;
     flex-direction: column;
-    padding-inline: 100px;
+    
     align-items: center;
     margin-top: 80px;
 }
@@ -268,7 +268,7 @@ header .header-icons svg:hover {
 
 /* Карусель на главной странице */
 .carousel {
-    width: 70%;
+    width: 60%;
     margin: 2rem auto;
     position: relative;
     overflow: hidden;
@@ -362,7 +362,7 @@ header .header-icons svg:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -378,12 +378,22 @@ header .header-icons svg:hover {
     overflow: hidden;
 }
 
+.page-index .offers .offers-card .offers-card-img {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
 .page-index .offers .offers-card img {
     height: 300px;
     width: 100%;
     object-fit: cover;
     display: block;
     border-radius: 12px;
+    transition: transform 0.3s ease-out ;
+}
+
+.page-index .offers .offers-card img:hover {
+    transform: scale(1.1);
 }
 
 .page-index .offers .offers-card h3 {
@@ -407,7 +417,6 @@ header .header-icons svg:hover {
     text-decoration: none;
     font-size: 1.125rem;     
     font-family: var(--font-ui);
-    padding-top: 0.625rem;   
-    padding-bottom: 0.625rem; 
+    padding: 0.625rem 0;
     border-radius: 0.75rem;  
 }
