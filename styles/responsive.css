@@ -58,6 +58,10 @@
     .page-index .offers {
         padding-inline: 10%;
     }
+
+    .page-index .categories {
+        width: 80%;
+    }
 }
 
 /** Стили для телефонов **/
@@ -119,6 +123,15 @@
     .carousel-slide.slide-3 a {
         font-size: 18px;
     }
+
+    .page-index .categories {
+        width: 90%;
+    }
+
+    .page-index .categories .categories-item h3 {
+        font-size: 22px;
+        right: 5px;
+    }
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -167,6 +180,10 @@
     .carousel-slide.slide-3 a {
         font-size: 18px;
         padding: 15px;
+    }
+
+    .page-index .categories {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
