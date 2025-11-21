@@ -269,7 +269,8 @@ header .header-icons svg:hover {
 /* Карусель на главной странице */
 .carousel {
     width: 60%;
-    margin: 2rem auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -286,40 +287,172 @@ header .header-icons svg:hover {
     height: 500px;
 }
 
-.carousel-slide {
+.carousel-slide.slide-1 {
     min-width: 100%;
+    background-image: url('../img/slide_1.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    justify-content: space-between;
+    padding: 30px;
 }
 
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.carousel-slide.slide-1 h3 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    margin: 0px;
+}
+
+.carousel-slide.slide-1 .button-banner {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.carousel-slide.slide-1 a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 20px;
+    background: linear-gradient(135deg, #4f67ff, #6a8bff);
+    padding: 15px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(79, 103, 255, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.carousel-slide.slide-1 a:hover {
+    transform: scale(1.05);
+}
+
+.carousel-slide.slide-1 a:active {
+    transform: scale(0.90);
+}
+
+
+.carousel-slide.slide-2 {
+    min-width: 100%;
+    background-image: url('../img/slide_2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.carousel-slide.slide-2 h3 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    font-size: 40px;
+    margin: 0px;
+    text-align: right;
+}
+
+.carousel-slide.slide-2 .button-banner {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.carousel-slide.slide-2 a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 20px;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    padding: 15px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(79, 103, 255, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.carousel-slide.slide-2 a:hover {
+    transform: scale(1.05);
+}
+
+.carousel-slide.slide-2 a:active {
+    transform: scale(0.90);
+}
+
+.carousel-slide.slide-3 {
+    min-width: 100%;
+    background-image: url('../img/slide_3.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-slide.slide-3 .button-banner {
+    display: flex;
+}
+
+.carousel-slide.slide-3 h3 {
+    font-family: var(--font-heading);
+    color: var(--color-dark-gray);
+    font-size: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+.carousel-slide.slide-3 a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 20px;
+    background: linear-gradient(135deg, #FF8C00, #FF6B6B);
+    padding: 15px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(79, 103, 255, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.carousel-slide.slide-3 a:hover {
+    transform: scale(1.05);
+}
+
+.carousel-slide.slide-3 a:active {
+    transform: scale(0.90);
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--color-dark-gray);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--color-white);
+    color: var(--color-dark-gray);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
 }
 
 .prev-btn {
@@ -362,7 +495,7 @@ header .header-icons svg:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 60%;
+    padding-inline: 20%;
     margin: 0 auto;
 }
 

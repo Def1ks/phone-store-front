@@ -1,13 +1,12 @@
 // Функция инициализации карусели
 function initCarousel() {
   const track = document.getElementById('carouselTrack');
-  const indicators = document.querySelectorAll('.indicator');
   const slides = document.querySelectorAll('.carousel-slide');
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
 
   // Проверяем, существуют ли элементы карусели на странице
-  if (!track || !indicators.length || !slides.length || !prevBtn || !nextBtn) {
+  if (!track || !slides.length || !prevBtn || !nextBtn) {
     console.log('Карусель не найдена на этой странице, пропускаем инициализацию.');
     return; // Выходим из функции, если элементы отсутствуют
   }
@@ -16,22 +15,7 @@ function initCarousel() {
 
   function updateCarousel() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    indicators.forEach((indicator, index) => {
-      if (index === currentIndex) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
-      }
-    });
   }
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      currentIndex = index;
-      updateCarousel();
-    });
-  });
 
   prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
@@ -56,7 +40,7 @@ function initCarousel() {
 function initBurgerMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const backdrop = document.querySelector('.backdrop'); // Добавлено
+  const backdrop = document.querySelector('.backdrop'); 
   const body = document.body;
 
   // Проверяем, существуют ли элементы меню на странице
