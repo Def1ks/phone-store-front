@@ -596,6 +596,7 @@ header .header-icons svg:hover {
 
 .page-index .offers .offers-card p {
     font-family: var(--font-body);
+    color: var(--color-medium-gray);
     font-weight: 400;
     font-size: 1rem;
 }
@@ -624,7 +625,12 @@ header .header-icons svg:hover {
 .page-index .categories .categories-item {
     position: relative;
     border-radius: 12px;
-    overflow: hidden
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-index .categories .categories-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
 }
 
 .page-index .categories .categories-item .categories-item-img {
