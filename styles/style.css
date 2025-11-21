@@ -137,6 +137,64 @@ header .desktop-menu .active {
     color: var(--color-dark-gray);
 }
 
+/* Подвал */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.3); 
+    margin-top: 50px;
+}
+
+footer span {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+footer .footer-container {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 30px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0px;
+}
+
+footer li {
+    display: flex;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+footer a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+footer p {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 22px;
+}
+
 /* Иконки профиля и корзины */
 header .header-icons {
     display: flex;
@@ -643,16 +701,16 @@ header .header-icons svg:hover {
     padding: 10px;
     border-radius: 12px;
     border: 1px solid var(--color-dark-gray);
-    color: var(--color-white); /* Чёрный текст */
+    color: var(--color-white); 
     font-family: var(--font-ui);
-    background-color: var(--color-dark-gray); /* Белый фон */
-    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Добавлен transition для transform */
+    background-color: var(--color-dark-gray); 
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
 }
 
 .new-products .products a:hover {
-    background-color: var(--color-white); /* При наведении фон станет серым */
-    color: var(--color-dark-gray); /* Текст станет белым */
-    transform: scale(1.05); /* Эффект приближения */
+    background-color: var(--color-white); 
+    color: var(--color-dark-gray); 
+    transform: scale(1.05); 
 }
 
 .new-products .products a:active {
