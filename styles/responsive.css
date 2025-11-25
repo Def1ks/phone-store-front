@@ -43,7 +43,15 @@
     }
 
     .new-products .products .products-info .products-img img {
-    max-height: 200px;
+        max-height: 200px;
+    }
+
+    .filter-checkbox-label {
+        font-size: 0.8rem;
+    }
+
+    .page-catalog .shop .filter button {
+        font-size: 0.9rem;
     }
 }
 
@@ -83,6 +91,60 @@
     .new-products {
         width: 80%;
     }
+
+    .page-catalog .shop {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+
+    .page-catalog .shop .mobile-filter {
+        visibility: hidden;
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        top: 60px;
+        padding-left: 70px;
+        border: none;
+        background-color: var(--color-white);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 0.6s ease;
+    }
+
+    .page-catalog .shop .mobile-filter.visible-filter {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .page-catalog .shop .filter .submit-button {
+        width: 40%;
+        padding: 5px 0px;
+        margin-top: 15px;
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        color: var(--color-dark-gray);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+        margin: 0;
+    }
+
+    .page-catalog .shop .items {
+        width: 100%;
+    }
+
+    .page-catalog .shop {
+        margin-top: 0;
+    }
+
+    .mobile-filter-button {
+        display: flex;
+    }
+
 }
 
 /** Стили для телефонов **/

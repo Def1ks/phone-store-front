@@ -5,13 +5,12 @@ function initCarousel() {
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
 
-  // Проверяем, существуют ли элементы карусели на странице
   if (!track || !slides.length || !prevBtn || !nextBtn) {
     console.log('Карусель не найдена на этой странице, пропускаем инициализацию.');
-    return; // Выходим из функции, если элементы отсутствуют
+    return;
   }
 
-  let currentIndex = 0; 
+  let currentIndex = 0;
 
   function updateCarousel() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -36,24 +35,22 @@ function initCarousel() {
   });
 }
 
-// Основная функция инициализации бургер-меню
+// Функция инициализации бургер-меню
 function initBurgerMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const backdrop = document.querySelector('.backdrop'); 
+  const backdrop = document.querySelector('.backdrop');
   const body = document.body;
 
-  // Проверяем, существуют ли элементы меню на странице
   if (!menuToggle || !mobileMenu) {
-     console.log('Элементы бургер-меню не найдены на этой странице, пропускаем инициализацию.');
-     return; // Выходим из функции, если элементы отсутствуют
+    console.log('Элементы бургер-меню не найдены на этой странице, пропускаем инициализацию.');
+    return;
   }
 
   menuToggle.addEventListener('click', function () {
     menuToggle.classList.toggle('is-active');
     mobileMenu.classList.toggle('menu-open');
-    
-    // Переключаем классы для body и backdrop
+
     const isOpen = mobileMenu.classList.contains('menu-open');
     body.classList.toggle('no-scroll', isOpen);
     if (backdrop) {
@@ -61,9 +58,8 @@ function initBurgerMenu() {
     }
   });
 
-  // Закрытие меню при клике на backdrop
   if (backdrop) {
-    backdrop.addEventListener('click', function() {
+    backdrop.addEventListener('click', function () {
       menuToggle.classList.remove('is-active');
       mobileMenu.classList.remove('menu-open');
       body.classList.remove('no-scroll');
@@ -72,9 +68,48 @@ function initBurgerMenu() {
   }
 }
 
+// Функция инициализации десктопных фильтров
+function initFilters() {
+  const filterToggles = document.querySelectorAll('.filter-toggle');
+
+  if (!filterToggles.length) {
+    console.log('Фильтры не найдены на этой странице, пропускаем инициализацию.');
+    return;
+  }
+
+  filterToggles.forEach(button => {
+    button.addEventListener('click', function () {
+      const targetBlock = this.nextElementSibling;
+      if (!targetBlock) return;
+
+      this.classList.toggle('active');
+      targetBlock.classList.toggle('visible-filter');
+    });
+  });
+}
+
+// Функция инициализации мобильной кнопки открытия фильтров
+function initMobileFilterToggle() {
+  const openButton = document.querySelector('.mobile-filter-button');
+  const mobileFilter = document.querySelector('.page-catalog .shop .mobile-filter');
+
+  if (!openButton || !mobileFilter) {
+    console.log('Кнопка или блок мобильных фильтров не найдены.');
+    return;
+  }
+
+  openButton.addEventListener('click', function () {
+    mobileFilter.classList.toggle('visible-filter');
+  });
+
+}
+
+// Запуск всех компонентов после загрузки DOM
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM загружен, инициализируем функции...');
 
-  initCarousel();    
-  initBurgerMenu();  
+  initCarousel();
+  initBurgerMenu();
+  initFilters();
+  initMobileFilterToggle();
 });
