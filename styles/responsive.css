@@ -100,7 +100,7 @@
 
     .page-catalog .shop .mobile-filter {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         width: 100vw;
         left: 0;
         top: 60px;
@@ -226,6 +226,29 @@
 
     footer .footer-container {
         width: 90%;
+    }
+
+    .page-catalog .shop .items {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .page-catalog .shop .items .item-card {
+        max-width: 200px;
+        max-height: 275px;
+        margin-inline: auto;
+    }
+
+    .page-catalog .shop .items .item-card h3 {
+        font-size: 1rem;
+    }
+
+    .page-catalog .shop .items .item-card p {
+        font-size: 0.8rem;
+    }
+
+    .page-catalog .shop .items .item-card button {
+        font-size: 0.8rem;
     }
 }
 

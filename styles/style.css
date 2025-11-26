@@ -736,6 +736,7 @@ header .header-icons svg:hover {
     display: flex;
     width: 70%;
     gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .mobile-filter-button {
@@ -890,14 +891,69 @@ header .header-icons svg:hover {
 }
 
 .page-catalog .shop .filter .submit-button:hover {
-    background-color:  var(--color-dark-gray);;
+    background-color: var(--color-dark-gray);
     color: var(--color-white);
-} 
+}
 
 .page-catalog .shop .filter .submit-button:active {
     transform: scale(0.9);
-} 
+}
 
 .visible-filter {
-    display: flex!important;
+    display: flex !important;
+}
+
+.page-catalog .shop .items {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 1rem;
+}
+
+.page-catalog .shop .items .item-card {
+    width: 100%;
+    max-width: 275px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-catalog .shop .items .item-card img {
+    height: 55%;
+    width: auto; 
+    object-fit: contain; 
+    object-position: center;
+}
+
+.page-catalog .shop .items .item-card h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.page-catalog .shop .items .item-card p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.page-catalog .shop .items .item-card button {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: var(--color-dark-gray);
+    border: 1px solid rgba(0, 0, 0, 0.6); 
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-catalog .shop .items .item-card button:hover {
+    color: var(--color-dark-gray);
+    background-color: var(--color-white);
 }
