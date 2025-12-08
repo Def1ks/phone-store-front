@@ -145,6 +145,10 @@
         display: flex;
     }
 
+    .page-index .categories .categories-item h3 {
+        font-size: 22px;
+    }
+
 }
 
 /** Стили для телефонов **/
@@ -209,11 +213,6 @@
 
     .page-index .categories {
         width: 90%;
-    }
-
-    .page-index .categories .categories-item h3 {
-        font-size: 22px;
-        right: 5px;
     }
 
     .new-products {
@@ -333,6 +332,10 @@
 
     footer p {
         font-size: 16px;
+    }
+
+    .page-index .categories .categories-item h3 {
+        font-size: 22px;
     }
 }
 
