@@ -255,6 +255,14 @@
         font-size: 12px;
         margin-top: 5px;
     }
+
+    .page-catalog .shop .items .item-card .cart-quantity-badge {
+        top: -6px;
+        right: -6px;
+        min-width: 16px;
+        height: 16px;
+        font-size: 11px;
+    }
 }
 
 /** Стили для очень маленьких телефонов **/
