@@ -244,11 +244,17 @@
     }
 
     .page-catalog .shop .items .item-card p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .page-catalog .shop .items .item-card button {
         font-size: 0.8rem;
+        padding: 3px;
+    }
+
+    .page-catalog .shop .items .item-card a {
+        font-size: 12px;
+        margin-top: 5px;
     }
 }
 

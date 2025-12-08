@@ -955,3 +955,11 @@ header .header-icons svg:hover {
     color: var(--color-dark-gray);
     background-color: var(--color-white);
 }
+
+.page-catalog .shop .items .item-card a {
+    text-decoration: none;
+    margin-inline: auto;
+    color: var(--color-dark-gray);
+    font-family: var(--font-ui);
+    font-size: 14px;
+}
