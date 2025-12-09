@@ -263,6 +263,22 @@
         height: 16px;
         font-size: 11px;
     }
+
+    .page-about-us h1 {
+        font-size: 64px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .section-content {
+        margin-inline: 30px;
+    }
+
+    .section-content p {
+        font-size: 18px;
+    }
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -344,6 +360,20 @@
 
     .page-index .categories .categories-item h3 {
         font-size: 22px;
+    }
+
+    .page-about-us h1 {
+        font-size: 48px;
+        padding-inline: 5px;
+    }
+
+    .section-title {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .section-content p {
+        font-size: 14px;
     }
 }
 

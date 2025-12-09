@@ -651,9 +651,9 @@ header .header-icons svg:hover {
     font-size: 36px;
     font-family: var(--font-heading);
     color: var(--color-white);
-    background-color: rgba(0, 0, 0, 0.3); 
-    padding: 4px 12px; 
-    border-radius: 16px; 
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px 12px;
+    border-radius: 16px;
 }
 
 /* Стили карточек новинок */
@@ -927,8 +927,8 @@ header .header-icons svg:hover {
 
 .page-catalog .shop .items .item-card img {
     height: 55%;
-    width: auto; 
-    object-fit: contain; 
+    width: auto;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -950,7 +950,7 @@ header .header-icons svg:hover {
     font-weight: 500;
     color: var(--color-white);
     background-color: var(--color-dark-gray);
-    border: 1px solid rgba(0, 0, 0, 0.6); 
+    border: 1px solid rgba(0, 0, 0, 0.6);
     padding: 8px 16px;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
@@ -963,33 +963,30 @@ header .header-icons svg:hover {
 }
 
 .item-buy-wrapper {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 /* Бейдж — количество товаров */
 .page-catalog .shop .items .item-card .cart-quantity-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: #ff4444; 
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  min-width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2px;
-  font-family: var(--font-ui);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4444;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+    font-family: var(--font-ui);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
-
-
-
 
 .page-catalog .shop .items .item-card a {
     text-decoration: none;
@@ -997,4 +994,113 @@ header .header-icons svg:hover {
     color: var(--color-dark-gray);
     font-family: var(--font-ui);
     font-size: 14px;
+}
+
+.page-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-about-us h1 {
+    font-size: 80px;
+    font-family: var(--font-heading);
+    background: linear-gradient(90deg,
+            #ff00cc, #3333ff, #00ccff, #00ff99, #ccff00, #ff9900, #ff00cc);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowShine 10s linear infinite;
+    display: inline-block;
+    transition: all 0.4s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 800;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+@keyframes rainbowShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.page-about-us .about-intro {
+    width: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+}
+
+/* Стиль заголовков разделов */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    border-radius: 2px;
+}
+
+/* Стиль основного текста */
+.section-content {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-content:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.section-content p {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+    margin: 0;
+}
+
+.section-content p+p {
+    margin-top: 16px;
+}
+
+.section-title.visible,
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

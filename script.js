@@ -101,7 +101,34 @@ function initMobileFilterToggle() {
   openButton.addEventListener('click', function () {
     mobileFilter.classList.toggle('visible-filter');
   });
+}
 
+// Функция для плавного появления заголовков и блоков при скролле
+function initSectionReveal() {
+  const titles = document.querySelectorAll('.section-title');
+
+  if (!titles.length) {
+    console.log('Заголовки .section-title не найдены, пропускаем инициализацию анимации.');
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Добавляем видимость и для следующего .section-content, если он есть
+        const nextContent = entry.target.nextElementSibling;
+        if (nextContent && nextContent.classList.contains('section-content')) {
+          nextContent.classList.add('visible');
+        }
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px' // триггер чуть раньше
+  });
+
+  titles.forEach(title => observer.observe(title));
 }
 
 // Запуск всех компонентов после загрузки DOM
@@ -112,4 +139,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initBurgerMenu();
   initFilters();
   initMobileFilterToggle();
+  initSectionReveal(); // анимация появления секций
 });
