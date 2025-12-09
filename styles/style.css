@@ -347,7 +347,7 @@ header .header-icons svg:hover {
 
 .carousel-slide.slide-1 {
     min-width: 100%;
-    background-image: url('../img/slide_1.jpg');
+    background-image: url('../img/index_page_img/slides/slide_1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -392,7 +392,7 @@ header .header-icons svg:hover {
 
 .carousel-slide.slide-2 {
     min-width: 100%;
-    background-image: url('../img/slide_2.jpg');
+    background-image: url('../img/index_page_img/slides/slide_2.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -438,7 +438,7 @@ header .header-icons svg:hover {
 
 .carousel-slide.slide-3 {
     min-width: 100%;
-    background-image: url('../img/slide_3.jpg');
+    background-image: url('../img/index_page_img/slides/slide_3.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -852,7 +852,11 @@ header .header-icons svg:hover {
     vertical-align: middle;
     margin-right: 8px;
     position: relative;
-    transition: background 0.2s ease, border-color 0.2s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter-checkbox-mark:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
 }
 
 /* Галочка внутри при checked */
