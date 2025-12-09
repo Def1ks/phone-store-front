@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <a href="index.html" class="logo">Phone Store</a>
         <!-- Основная навигация -->
-        <nav class = "desktop-menu">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about-us.html">О нас</a></li>
-        </ul>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about-us.html">О нас</a></li>
+            </ul>
         </nav>
         <!-- Иконки профиля и корзины -->
         <div class="header-icons">
@@ -54,6 +56,93 @@
             <li><a href="basket.html">Корзина</a></li>
         </ul>
     </nav>
+    <main class="page-profile">
+        <section class="profile-user">
+            <h3>Пользователь</h3>
+            <div class="user-info">
+                <p><strong>Имя:</strong> Иван </p>
+                <p><strong>Фамилия:</strong> Иванов </p>
+                <p><strong>Email:</strong> ivan.petrov@example.com</p>
+                <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                <p><strong>Адрес:</strong> г. Москва, ул. Ленина, д. 10, кв. 5</p>
+            </div>
+            <div class="user-actions">
+                <button>Редактировать профиль</button>
+                <button>Изменить пароль</button>
+                <button>Выход</button>
+            </div>
+        </section>
+        <section class="orders">
+            <h3>Заказы</h3>
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-number">Номер заказа: 4172-1828</span>
+                </div>
+                <div class="order-info">
+                    <div class="order-details">
+                        <span class="order-date">📅 05.12.2025</span>
+                        <span class="order-status">📦 Доставлен</span>
+                        <span class="order-total">💰 129 990 ₽</span>
+                    </div>
+                    <button>Подробнее</button>
+                </div>
+            </div>
+            <!-- Второй заказ -->
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-number">Номер заказа: 4172-1828</span>
+                </div>
+                <div class="order-info">
+                    <div class="order-details">
+                        <span class="order-date">📅 06.12.2025</span>
+                        <span class="order-status">📦 В пути</span>
+                        <span class="order-total">💰 59 990 ₽</span>
+                    </div>
+                    <button>Подробнее</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Подвал -->
+    <footer>
+        <span>Phone Store</span>
+        <div class="footer-container">
+            <div class="footer-nav footer-column">
+                <ul>
+                    <li>
+                        <p>Навигация</p>
+                    </li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about-us.html">О нас</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                    <li><a href="basket.html">Корзина</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-catalog footer-column">
+                <ul>
+                    <li>
+                        <p>Каталог</p>
+                    </li>
+                    <li><a href="catalog.html">Samsung</a></li>
+                    <li><a href="catalog.html">Apple</a></li>
+                    <li><a href="catalog.html">Аксессуары</a></li>
+                    <li><a href="catalog.html">Все товары</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-contacts footer-column">
+                <ul>
+                    <li>
+                        <p>Контакты</p>
+                    </li>
+                    <li><a href="tel:+79993344555">+7 999 33 44 555</a></li>
+                    <li><a href="mailto:phonestore@gmail.com">phonestore@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <!-- Для затемнения экрана -->
     <div class="backdrop"></div>
 </body>

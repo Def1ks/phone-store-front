@@ -1008,6 +1008,7 @@ header .header-icons svg:hover {
     background: linear-gradient(90deg,
             #ff00cc, #3333ff, #00ccff, #00ff99, #ccff00, #ff9900, #ff00cc);
     background-size: 200% 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbowShine 10s linear infinite;
@@ -1101,6 +1102,152 @@ header .header-icons svg:hover {
 
 .section-title.visible,
 .section-content.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 70%;
+    margin-top: 40px;
+}
+
+.page-profile .profile-user {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.page-profile .profile-user h3 {
+    margin-top: 0;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 24px;
+}
+
+.page-profile .profile-user .user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.page-profile .profile-user p {
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+}
+
+.page-profile .profile-user .user-actions button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.page-profile .profile-user .user-actions button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.page-profile .profile-user .user-actions button:active {
+    transform: scale(0.90);
+}
+
+.page-profile .orders {
+    width: 65%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.orders {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.orders h3 {
+    margin-top: 0;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 24px;
+}
+
+.order-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовок заказа — в левом верхнем углу */
+.order-header {
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.order-number {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.order-info button {
+    background: transparent;
+    border: none;
+    color: #007bff;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.order-info button:hover {
+    color: #288ffe;
+}
+
+.order-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 16px;
+    font-family: var(--font-body);
+    align-items: flex-start;
+}
+
+.order-date,
+.order-status,
+.order-total {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
