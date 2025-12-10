@@ -10,19 +10,21 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <a href="index.html" class="logo">Phone Store</a>
         <!-- Основная навигация -->
-        <nav class = "desktop-menu">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about-us.html">О нас</a></li>
-        </ul>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about-us.html">О нас</a></li>
+            </ul>
         </nav>
         <!-- Иконки профиля и корзины -->
         <div class="header-icons">
@@ -54,6 +56,82 @@
             <li><a href="basket.html" class="active">Корзина</a></li>
         </ul>
     </nav>
+    <main class="page-basket">
+        <section class="basket">
+            <!-- Список товаров в корзине -->
+            <div class="basket-items">
+                <div class="img-info">
+                    <img src="img/product_img/17-iphone-pro-dark-blue-256.webp">
+                    <div class="items-info">
+                        <div class="info">
+                            <p>Модель: iPhone 17 Pro Max</p>
+                            <p>Объем памяти: 256 Gb</p>
+                            <p>Цвет: Темно-синий</p>
+                            <p>Количество: 1</p>
+                        </div>
+                        <span class="price">Стоимость: 69 999 Р</span>
+                    </div>
+                </div>
+                <button class="delete-item-btn">Удалить</button>
+            </div>
+            <div class="basket-items">
+                <div class="img-info">
+                    <img src="img/product_img/17-iphone-pro-dark-blue-256.webp">
+                    <div class="items-info">
+                        <div class="info">
+                            <p>Модель: iPhone 17 Pro Max</p>
+                            <p>Объем памяти: 256 Gb</p>
+                            <p>Цвет: Темно-синий</p>
+                        </div>
+                        <span class="price">Стоимость: 69 999 Р</span>
+                    </div>
+                </div>
+                <button class="delete-item-btn">Удалить</button>
+            </div>
+            <span class="sum">Стоимость заказа: 139 998 Р</span>
+            <button class="basket-checkout-btn">Перейти к оформлению</button>
+        </section>
+    </main>
+    <!-- Подвал -->
+    <footer>
+        <span>Phone Store</span>
+        <div class="footer-container">
+            <div class="footer-nav footer-column">
+                <ul>
+                    <li>
+                        <p>Навигация</p>
+                    </li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about-us.html">О нас</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                    <li><a href="basket.html">Корзина</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-catalog footer-column">
+                <ul>
+                    <li>
+                        <p>Каталог</p>
+                    </li>
+                    <li><a href="catalog.html">Samsung</a></li>
+                    <li><a href="catalog.html">Apple</a></li>
+                    <li><a href="catalog.html">Аксессуары</a></li>
+                    <li><a href="catalog.html">Все товары</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-contacts footer-column">
+                <ul>
+                    <li>
+                        <p>Контакты</p>
+                    </li>
+                    <li><a href="tel:+79993344555">+7 999 33 44 555</a></li>
+                    <li><a href="mailto:phonestore@gmail.com">phonestore@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <!-- Для затемнения экрана -->
     <div class="backdrop"></div>
 </body>

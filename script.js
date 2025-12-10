@@ -116,7 +116,6 @@ function initSectionReveal() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Добавляем видимость и для следующего .section-content, если он есть
         const nextContent = entry.target.nextElementSibling;
         if (nextContent && nextContent.classList.contains('section-content')) {
           nextContent.classList.add('visible');
@@ -125,7 +124,7 @@ function initSectionReveal() {
     });
   }, {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px' // триггер чуть раньше
+    rootMargin: '0px 0px -50px 0px' 
   });
 
   titles.forEach(title => observer.observe(title));
@@ -139,5 +138,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initBurgerMenu();
   initFilters();
   initMobileFilterToggle();
-  initSectionReveal(); // анимация появления секций
+  initSectionReveal(); 
 });

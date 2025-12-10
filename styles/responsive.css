@@ -66,6 +66,11 @@
     .page-profile .profile-user p {
         font-size: 16px;
     }
+
+    .page-basket {
+        width: 80%;
+        margin-top: 40px;
+    }
 }
 
 /** Сенсорные устройства **/
@@ -168,6 +173,11 @@
 
     .page-profile .profile-user .user-actions button {
         font-size: 12px;
+    }
+
+    .page-basket {
+        width: 90%;
+        margin-top: 10px;
     }
 
 }
@@ -334,6 +344,31 @@
         width: 100%;
     }
 
+    .page-basket {
+        width: 90%;
+        margin-top: 0px;
+    }
+
+    .page-basket .basket .basket-items .items-info .price {
+        font-size: 14px;
+    }
+
+    .page-basket .basket .basket-items .items-info p {
+        font-size: 12px;
+    }
+
+    .page-basket .basket .basket-items img {
+        max-width: 75px;
+    }
+
+    .page-basket .basket .sum {
+        font-size: 14px;
+    }
+
+    .page-basket .basket .basket-checkout-btn {
+        font-size: 12px;
+        padding: 10px;
+    }
 }
 
 /** Стили для очень маленьких телефонов **/
@@ -452,6 +487,25 @@
 
     .order-info button {
         font-size: 12px;
+    }
+
+    .page-basket .basket .basket-items img {
+        max-width: 125px;
+    }
+
+     .page-basket .basket .basket-items .items-info p {
+        font-size: 16px;
+     }
+
+    .page-basket .basket .sum {
+        font-size: 14px;
+    }
+    .page-basket .basket .basket-items .img-info {
+        flex-direction: column;
+    }
+     .page-basket .basket .basket-items {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
